@@ -33,7 +33,7 @@ function onReady(){
     newToDoText.value = "";
 
     //create button
-    let newButton = document.createElement('button');
+    let newButton = document.createElement('button')
 
     //add text
     let name = document.createTextNode("Remove To-D0");
@@ -47,16 +47,21 @@ function onReady(){
     //attach to checklist
     newLi.appendChild(newButton);
 
+
+     newButton.addEventListener('click', event =>{
+      toDoList.removeChild(newLi)
+    });
+
 });
 
-const oldButton = document.getElementsByTagName('button');
-let newLi = document.getElementsByTagName('li');
+   /*const oldButton = document.getElementsByTagName('button');
+   let newLi = document.getElementsByTagName('li');
    oldButton.addEventListener('click', event =>{
 
-  toDoList.removeChild(newLi);
+    toDoList.removeChild(newLi);
 
 
-});
+});*/
 
 }
 
