@@ -62,14 +62,17 @@ function onReady(){
         //This adds a button to the newLi
         newLi.appendChild(button);
 
-        //const button = document.getElementById('button');
-        if(button){
+        //This adds an eventlistener to the delete button
+        button.addEventListener('click', event =>{
+          event.preventDefault();
+           newLi.remove();
+          const index = toDos.indexOf(newLi)
+          if(index > -1){
+          toDos.splice(index, 1);
 
-         //This adds an eventlistener to the delete button
-         button.addEventListener('click', event =>{
-          newLi.remove();
-        });
-        }
+         }
+         console.log(toDos);
+       });
 
 
     });
