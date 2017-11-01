@@ -65,13 +65,14 @@ function onReady(){
         //This adds an eventlistener to the delete button
         button.addEventListener('click', event =>{
           event.preventDefault();
-           newLi.remove();
-          const index = toDos.indexOf(newLi)
-          if(index > -1){
+           toDoList.removeChild(newLi);
+          const index = toDos.indexOf(toDoList.newLi);
+
+          
           toDos.splice(index, 1);
 
-         }
-         console.log(toDos);
+
+        console.log(toDos);
        });
 
 
